@@ -30,7 +30,6 @@ namespace Clothe
         {
             this.InitializeComponent();
             shopDataSourceModel = new ShopDataSourceModel(ShopDataSource.Instance);
-            DataContext = shopDataSourceModel;
         }
 
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)

@@ -45,7 +45,10 @@
                 <Image x:Name="pageLogo" Source="Assets/clothelogo.png" MaxHeight="120" Stretch="Uniform" ToolTipService.ToolTip="Clothe" Margin="0,16,16,0"  />
                 <TextBlock Style="{StaticResource HeaderTextStyle}" Text="Yourself" VerticalAlignment="Center"></TextBlock>
             </StackPanel>
-            <TextBlock x:Name="txtLocation" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" TextAlignment="Right" Style="{StaticResource TitleTextStyle}" />
+            <StackPanel Grid.Column="1" Margin="10" HorizontalAlignment="Right">
+                <TextBlock Text="Powered by: Yellow Pages®."  HorizontalAlignment="Right" VerticalAlignment="Top" />
+                <TextBlock x:Name="txtLocation" HorizontalAlignment="Right" VerticalAlignment="Top" TextAlignment="Right" Style="{StaticResource TitleTextStyle}" />
+            </StackPanel>
         </Grid>
         
         <Grid Grid.Row="1">

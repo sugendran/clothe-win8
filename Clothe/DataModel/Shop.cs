@@ -139,6 +139,11 @@ namespace Clothe.DataModel
             };
         }
 
+        public void reportShopDisplay(ShopDataItem shop)
+        {
+
+        }
+
         private void addHeadlineShop(ShopCategory category)
         {
             string cat = category.ToString();
@@ -149,6 +154,7 @@ namespace Clothe.DataModel
             for (int i = 0; i < shoeShopsCount && i < 1; i++)
             {
                 _headlineShops.Add(shoeShops[i]);
+                reportShopDisplay(shoeShops[i]);
             }
         }
 

@@ -30,18 +30,23 @@
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <StackPanel Orientation="Horizontal" Grid.Column="1">
                 <Image x:Name="pageLogo" Source="Assets/clothelogo.png" MaxHeight="120" Stretch="Uniform" ToolTipService.ToolTip="Clothe" Margin="0,16,16,0"  />
                 <TextBlock Style="{StaticResource HeaderTextStyle}" Text="Yourself" VerticalAlignment="Center"></TextBlock>
-                <TextBlock x:Name="pageTitle" Text="{Binding Shop.Name}" Style="{StaticResource PageHeaderTextStyle}" Grid.Column="1" IsHitTestVisible="false"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Margin="10" HorizontalAlignment="Right">
+                <TextBlock Text="Powered by: Yellow Pages®." HorizontalAlignment="Right" VerticalAlignment="Top"/>
             </StackPanel>
         </Grid>
         
-        <StackPanel>
-            
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="{Binding Shop.Name}" Style="{StaticResource PageHeaderTextStyle}" TextWrapping="NoWrap"></TextBlock>
+            <TextBlock Text="{Binding Shop.Address}" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"></TextBlock>
+            <TextBlock Text="{Binding Shop.Suburb}" Style="{StaticResource TitleTextStyle}" TextWrapping="NoWrap"></TextBlock>
         </StackPanel>
 
         <VisualStateManager.VisualStateGroups>
